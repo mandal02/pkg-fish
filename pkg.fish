@@ -9,12 +9,12 @@ function pkg -a arg -d 'A alias script for pacman'
         functions --erase _run_cmd
     end
 
-    argparse y/yes s/sync -- $argv; or return
+    set -l args $argv[2..]
+
+    argparse y/yes s/sync -- $args; or return
 
     test $_flag_y && set -l yes --noconfirm
     test $_flag_s && set -l sync -yy
-
-    set -l args $argv[2..]
 
     switch $arg
         case i in install
