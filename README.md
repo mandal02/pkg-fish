@@ -24,6 +24,37 @@ pkg is similar to FreeBSD's pkg command with additional shortcuts and arguments.
 | find     | f, fd | `pacman -Si`      | `-s`                | Query a package  |
 | search   | s     | `pacman -Ss`      | `-s`                | Search packages  |
 
+## Example
+Assuming you have added the `pkg.fish` file into the `conf.d` folder which makes the `pkg` function executable.
+
+```bash
+pkg search vifm
+```
+
+Pacman command
+```bash
+pacman -Ss vifm
+```
+
+```bash
+pkg i vifm -y
+```
+
+Pacman command
+```bash
+sudo pacman -S --needed --noconfirm vifm
+```
+
+### Let's update the system
+```bash
+pkg up -s
+```
+
+Pacman command
+```bash
+sudo pacman -Su --needed -yy
+```
+
 ## You don't have to enter sudo
 Certain pacman commands requires `sudo` command to run such as installing or removing packages. pkg already has added `sudo` into those commands, eliminating the need of typing `sudo` with pkg.
 
