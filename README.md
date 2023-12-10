@@ -27,6 +27,7 @@ pkg is similar to FreeBSD's pkg command with additional shortcuts and arguments.
 ## Example
 Assuming you have added the `pkg.fish` file into the `conf.d` folder which makes the `pkg` function executable.
 
+**Search a package**
 ```bash
 pkg search vifm
 ```
@@ -36,6 +37,7 @@ Pacman command
 pacman -Ss vifm
 ```
 
+**Install a package with assuming *yes* to all the propmts**
 ```bash
 pkg i vifm -y
 ```
@@ -45,7 +47,7 @@ Pacman command
 sudo pacman -S --needed --noconfirm vifm
 ```
 
-### Let's update the system
+**Updating the system with force sync**
 ```bash
 pkg up -s
 ```
